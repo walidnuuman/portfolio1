@@ -1,4 +1,4 @@
-# Full-Stack Web Portfolio
+ # Full-Stack Web Portfolio
 
 A professional, dynamic full-stack web portfolio designed to showcase projects, skills, and handle administrative inquiries. This project comprehensively demonstrates proficiency in standard web development technologies including HTML5, CSS3, JavaScript, PHP, and MySQL.
 

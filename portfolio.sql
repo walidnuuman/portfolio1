@@ -17,8 +17,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `portfolio_db`
 --
-CREATE DATABASE IF NOT EXISTS `portfolio_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `portfolio_db`;
+--CREATE DATABASE IF NOT EXISTS `portfolio_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+--USE `portfolio_db`;
 
 -- --------------------------------------------------------
 

@@ -15,7 +15,7 @@
     <!-- Navigation -->
     <header>
         <div class="nav-container container">
-            <a href="#" class="logo">Walid<span>.dev</span></a>
+  
             <nav>
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
@@ -33,7 +33,7 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section">
         <div class="container hero-content">
-            <h1>Hi, I'm Walid 👋</h1>
+            <h1>Nuuman Danbatta</h1>
             <h2>Full-Stack Web Developer</h2>
             <p>I build dynamic, responsive, and user-centric web applications integrating modern frontend technologies and robust backend architectures.</p>
             <div class="hero-cta">
@@ -95,10 +95,10 @@
                 
                 <div class="contact-info">
                     <h3>Contact Information</h3>
-                    <p><i class="fas fa-envelope"></i> walid@example.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+                    <p><i class="fas fa-envelope"></i> nuuann05@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Istanbul, Turkey</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/walidnuuman" target="_blank" rel="noreferrer noopener"><i class="fab fa-github"></i></a>
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                     </div>
