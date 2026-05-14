@@ -1,0 +1,437 @@
+/* =========================================
+   CSS Variables (Theming & Colors)
+   ========================================= */
+:root {
+    /* Light Theme */
+    --bg-color: #ffffff;
+    --bg-light: #f8f9fa;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --secondary-color: #e2e8f0;
+    --secondary-hover: #cbd5e1;
+    --border-color: #e5e7eb;
+    --card-bg: #ffffff;
+    --error-color: #ef4444;
+    --success-color: #10b981;
+    --transition: all 0.3s ease;
+}
+
+/* Dark Theme Variables */
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --bg-light: #1e1e1e;
+    --text-primary: #f8f9fa;
+    --text-secondary: #a0aab2;
+    --primary-color: #3b82f6;
+    --primary-hover: #60a5fa;
+    --secondary-color: #333333;
+    --secondary-hover: #444444;
+    --border-color: #333333;
+    --card-bg: #1e1e1e;
+}
+
+/* =========================================
+   Global Resets
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    transition: var(--transition);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-hover);
+}
+
+.btn-icon {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+/* =========================================
+   Header & Navigation
+   ========================================= */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links li a {
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.nav-links li a:hover {
+    color: var(--primary-color);
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* =========================================
+   Hero Section
+   ========================================= */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 70px; /* Offset for fixed header */
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    color: var(--text-secondary);
+}
+
+.hero-cta {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* =========================================
+   Projects Grid
+   ========================================= */
+.grid-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 20px;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.project-desc {
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   Contact Section
+   ========================================= */
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.contact-form {
+    flex: 2;
+    min-width: 300px;
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 250px;
+}
+
+.contact-info h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-group input.error,
+.form-group textarea.error {
+    border-color: var(--error-color);
+}
+
+.error-msg {
+    color: var(--error-color);
+    font-size: 0.8rem;
+    display: none;
+    margin-top: 5px;
+}
+
+.form-group.error .error-msg {
+    display: block;
+}
+
+/* Alert Messages */
+.alert {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.alert.hidden {
+    display: none;
+}
+
+.alert-success {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #10b981;
+}
+
+.alert-error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #ef4444;
+}
+
+/* =========================================
+   Footer
+   ========================================= */
+footer {
+    background-color: var(--bg-color);
+    border-top: 1px solid var(--border-color);
+    padding: 30px 0;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+footer a {
+    color: var(--primary-color);
+}
+
+/* =========================================
+   Responsive Design
+   ========================================= */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* In a real scenario, this would be a toggled mobile menu */
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-color);
+        flex-direction: column;
+        padding: 20px 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        color: var(--text-primary);
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .contact-wrapper {
+        flex-direction: column;
+    }
+}
